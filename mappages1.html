@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="game_style.css">
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+    
+
+
+<div class="a" id="map" style="width: 879px; height: 900px;"></div>
+<script>
+
+    var n = 5; 
+
+    function addPerson(xcoor, ycoor, name, dis_travelled, points) {
+        this.xcoor = xcoor;
+        this.ycoor = ycoor;
+        this.name = name;
+        this.dis_travelled = dis_travelled;
+        this.points = points; 
+    }       
+
+
+
+	const map = L.map('map').setView([17.445776471562866,78.34958297778951], 16);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	const LeafIcon = L.Icon.extend({
+		options: {
+			iconSize:     [100, 95],
+			shadowSize:   [50, 64],
+			iconAnchor:   [22, 94],
+			shadowAnchor: [4, 62],
+			popupAnchor:  [-3, -76]
+		}
+	});
+
+	const vanshika_ = new LeafIcon({iconUrl: 'carnew.png'});
+    const Kyrylo_ = new LeafIcon({iconUrl: 'carkyr-removebg-preview.png'});
+	const keval_ = new LeafIcon({iconUrl: 'carkeval-removebg-preview.png'});
+	const romica_ = new LeafIcon({iconUrl: 'carromica-removebg-preview.png'});
+	const vansh_ = new LeafIcon({iconUrl: 'carvansh-removebg-preview.png'});
+
+
+    const KyryloCar = L.marker([17.445776471562866,78.34958297778951], {icon: Kyrylo_}).addTo(map).bindPopup('I am Kyrylo.');
+    // const RomicaCar = L.marker([17.447776471562866,78.38958297778951], {icon: romica_}).addTo(map).bindPopup('I am Romica.');
+    // const VanshikaCar = L.marker([17.4675776471562866,78.35958297778951], {icon: vanshika_}).addTo(map).bindPopup('I am Vanshika.');
+    // const VanshCar = L.marker([17.439776471562866,78.36958297778951], {icon: vansh_}).addTo(map).bindPopup('I am Vansh.');
+    // const KevalCar = L.marker([17.4735776471562866,78.33758297778951], {icon: keval_}).addTo(map).bindPopup('I am Keval.');
+
+
+
+
+    
+
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent(`You clicked the map at ${e.latlng.toString()}`)
+			.openOn(map);
+	}
+
+	map.on('click', onMapClick);
+
+</script>
+
+<div class="leaderboard" >
+	<div>
+        <br> <br> <br>
+		<h1>Scorecard</h1>
+	</div>
+
+<div class="wrapper" >
+	<div class="lboard_section">
+		<div class="lboard_tabs">
+			<div class="tabs">
+				<ul>
+					<li data-li="today">Today</li>
+					<li class="active" data-li="month">Month</li>
+					<li data-li="year">Year</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="lboard_wrap" >
+			<div class="lboard_item today" style="display: none;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_3.jpeg" alt="picture_3">
+					</div>
+					
+					<div class="name_bar">
+						<p><span></span>Kyrylo</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 60%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						160 points
+					</div>
+				</div>
+            </div>
+				
+			<div class="lboard_item month" style="display: block;" >
+				
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_3.jpeg" alt="picture_3">
+					</div>
+					<div class="name_bar">
+						<p><span></span>Kyrylo</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1185 points
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="lboard_item year" style="display: none;">
+				
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_3.jpeg" alt="picture_3">
+					</div>
+					<div class="name_bar">
+						<p><span></span>Kyrylo</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 65%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						2160 points
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script src="game_js.js"></script>
+</div>
+
+
+
+</body>
+</html>

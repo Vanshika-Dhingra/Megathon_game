@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Interactive 3D Character with Three.js | Codrops</title>
+		<meta name="description" content="Demo for the tutorial on how to add an interactive 3D character to a website." />
+		<meta name="keywords" content="3d model, three.js, tutorial, interactive, website, web development" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<!-- <script>document.documentElement.className="js";var supportsCssVars=function f2(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script>document.documentElement.className="js1";var supportsCssVars=function f1(){var e1,t1=document.createElement("style1");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script> -->
+	</head>
+	<body>
+		<div class="loading" id="js-loader">
+			<div class="loader"></div>
+		</div>
+		<div class="wrapper">
+		    <!-- The canvas element is used to draw the 3D scene -->
+			<canvas id="c"></canvas>
+		</div>
+		<div class="frame">
+			
+			<div class="frame">
+				<div class="frame__links">
+					<a href="http://127.0.0.1:8080/mappages1.html">SINGLE</a>
+					<a href="http://127.0.0.1:8080/mappage.html">MULTI</a>
+					<a href="http://127.0.0.1:8080/index4.html">STATS</a>
+					<a href="http://127.0.0.1:8080/youtube.html">SHOP</a>
+					<a href="http://127.0.0.1:8080/index2.html">CHANGE AVATAR</a>
+					<br>
+					<a href="http://127.0.0.1:8080/tour.html">TOURNMENT</a>
+					<br><br><br><br><br><br><br><br><div>
+					
+						<table>
+					<tr>
+						<h2>Basic Information</h2>
+					</tr>
+					<br> <br>
+					<tr class="tablerow"> 
+						<b>First Name: Kyrylo</b>
+					</tr> 
+					<br> <br>
+					<tr> 
+						<b>Last Name: Kumar </b>
+					</tr>
+					<br> <br>
+					<tr> 
+						<b>Vehicle Type: Jeep </b> 
+					</tr>
+					<br> <br>
+					<tr> 
+						<b>Vehicle Model: Compass </b>
+					</tr>
+					<br> <br> <br> <br> <br>
+					<tr> 
+					
+				</table>		
+					</div>
+				</div>
+	
+				<br>
+				<img style="float: right;"  src="coins.png" alt="22000 Coins" width="25%">
+				
+			</div>
+		<span class="action">Hello Kyrylo!</span>
+		<!-- The main Three.js file -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+		<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+		<script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+		<!-- partial --> 
+		<script  src="js/script1.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>routube.com</title>
+<link rel="stylesheet" href="video.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="general.css">
+
+<style>
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    </style>
+    
+</head>
+
+<body>
+    <!-- <div class="header">
+        <div class="left">left section</div>
+        <div class="middle"> <input class="search-bar" type="text" placeholder="Search">
+        </div>
+        <div class="right">right section</div>
+
+
+    </div> -->
+    <div class="video-grid">
+        <div class="video-preview">
+            <div>
+
+                <img class="thumbnail" src="1.jpeg">
+            </div>
+            <div class="video-grid-info">
+                <div class="channel-picture">
+                </div>
+
+                <div class="video-info">
+                    <button class="button">$ 1M</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div>
+                <img class="thumbnail" src="2.png">
+            </div>
+
+            <div class="video-grid-info">
+                <div class="video-info">
+                    <button class="button">$ 4M</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="video-preview">
+            <div>
+                <img class="thumbnail" src="4.png">
+            </div>
+            <div class="video-grid-info">
+                <div class="channel-picture">
+                </div>
+
+                <div class="video-info">
+                    <button class="button">$ 2M</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div>
+                <img class="thumbnail" src="7.webp">
+            </div>
+            <div class="video-grid-info">
+                <div class="channel-picture">
+                </div>
+
+                <div class="video-info">
+                    <button class="button">$ 5M</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div>
+
+                <img class="thumbnail" src="9.jpeg">
+            </div>
+            <div class="video-grid-info">
+                <div class="channel-picture">
+                </div>
+
+                <div class="video-info">
+                    <button class="button">$ 2M</button>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div>
+
+                <img class="thumbnail" src="10.jpeg">
+            </div>
+            <div class="video-grid-info">
+                <div class="channel-picture">
+                </div>
+
+                <div class="video-info">
+                    <button class="button">$ 3M</button>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+
+</html>
